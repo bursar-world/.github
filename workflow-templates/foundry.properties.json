@@ -1,0 +1,7 @@
+{
+  "name": "Bursar Solidity (Foundry)",
+  "description": "Check formatting, build and test Solidity contracts with Foundry, using pinned actions and read-only permissions.",
+  "iconName": "octicon shield-check",
+  "categories": ["Solidity"],
+  "filePatterns": ["^foundry\\.toml$"]
+}

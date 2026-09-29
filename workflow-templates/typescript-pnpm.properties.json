@@ -1,0 +1,7 @@
+{
+  "name": "Bursar TypeScript (pnpm)",
+  "description": "Install, build, type-check and test a pnpm workspace with pinned actions and read-only permissions.",
+  "iconName": "octicon package",
+  "categories": ["TypeScript", "JavaScript"],
+  "filePatterns": ["^pnpm-lock\\.yaml$"]
+}

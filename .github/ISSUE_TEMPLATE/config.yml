@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/bursar-world/bursar/discussions
+    about: Ask how something works, or float an idea before it becomes a feature request.
+  - name: Report a vulnerability
+    url: https://github.com/bursar-world/.github/blob/main/SECURITY.md
+    about: Never open an issue for a security problem. Email security@bursar.world or report privately.
+  - name: Documentation
+    url: https://app.bursar.world/docs
+    about: How to create a mandate, pay from an agent and take on work as a provider.

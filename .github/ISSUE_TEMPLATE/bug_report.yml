@@ -1,0 +1,40 @@
+name: Bug report
+description: Something does not behave the way its code or documentation says it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If the problem could put funds at risk, stop here and follow the [security policy](https://github.com/bursar-world/.github/blob/main/SECURITY.md) instead.
+
+        Never paste a private key, seed phrase, keystore password, API key or database URL with credentials into this form.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The smallest set of steps, commands or calls that shows the problem.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Commit hash, package version, or the page URL if it happened on a website.
+  - type: textarea
+    id: onchain
+    attributes:
+      label: On-chain references
+      description: Contract, mandate or transaction addresses on Robinhood Chain, if any.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or errors
+      description: The full error text. Remove anything secret first.
+      render: text
