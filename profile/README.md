@@ -21,6 +21,9 @@ itself, so a payment outside them fails on chain whatever any service in front o
 - **Private mandates.** A mandate's terms can stay off the public record, with a zero-knowledge
   proof that each payment fits them. Funding and payments can go through a shielded USDG pool,
   and you choose who may read your records.
+- **$BURSAR.** Bursar's token on Robinhood Chain,
+  [`0xe4d2422ed4d203a0f1ec2043a4db1eda426fca18`](https://robinhoodchain.blockscout.com/token/0xe4d2422ed4d203a0f1ec2043a4db1eda426fca18). It trades on
+  [Pons](https://www.ponsfamily.com/launchpad/0xe4d2422ed4d203a0f1ec2043a4db1eda426fca18).
 - **[Documentation](https://app.bursar.world/docs)** and the product site at
   [bursar.world](https://bursar.world).
 
@@ -79,7 +82,7 @@ flowchart TB
     end
     subgraph gov["Governance and token"]
       TL["AdminTimelock"]
-      TOK["BRSR, Staking<br/>Vesting, Buyback"]
+      TOK["BURSAR, Staking<br/>Vesting, Buyback"]
     end
     subgraph ext["Robinhood Chain assets and markets"]
       USDG[("USDG")]
