@@ -20,6 +20,10 @@ flowchart TB
       MA["MandateAccount"]
       CM["Committed mandates<br/>and proof verifier"]
     end
+    subgraph endow["Endowments"]
+      EF["EndowmentFactory<br/>and RemoteIdentity"]
+      EN["Endowment"]
+    end
     subgraph settle["Settlement and trust"]
       E["Escrow"]
       OR["OracleRegistry"]
@@ -38,7 +42,7 @@ flowchart TB
     end
     subgraph gov["Governance and token"]
       TL["AdminTimelock"]
-      TOK["BRSR, Staking<br/>Vesting, Buyback"]
+      TOK["Staking and<br/>resolver bonds"]
     end
     subgraph ext["Robinhood Chain assets and markets"]
       USDG[("USDG")]
@@ -47,10 +51,20 @@ flowchart TB
     end
   end
 
+  subgraph base["Base"]
+    BS["x402 services<br/>and buyers, in USDC"]
+  end
+
   P -->|"creates, funds, sets limits"| C
   P -.->|"approves payments above threshold"| MA
   C --> MF
   MF -->|"one account per mandate"| MA
+  C -->|"endows an agent"| EF
+  EF -->|"one per agent"| EN
+  EN -->|"holds listed stocks"| rwa
+  EN -->|"yearly draw"| MA
+  F <-->|"pays services, takes sales"| BS
+  F -->|"earnings"| EN
   A -->|"pays inside its limits"| MA
   A -->|"x402 payment"| F
   F -->|"checks the spend"| U
@@ -76,5 +90,5 @@ flowchart TB
 
   classDef own fill:#faf8f7,stroke:#49345f,color:#49345f
   classDef extn fill:#ffffff,stroke:#ecb29d,color:#49345f
-  class P,C,A,F,U,R,S,MF,MA,CM,E,OR,AR,REP,RG,TP,CV,DR,SL,SP,TL,TOK own
-  class USDG,CL,UNI extn
+  class P,C,A,F,U,R,S,MF,MA,CM,EF,EN,E,OR,AR,REP,RG,TP,CV,DR,SL,SP,TL,TOK own
+  class USDG,CL,UNI,BS extn

@@ -12,7 +12,7 @@ lists the contract addresses in scope and takes precedence for that code.
 
 No Bursar contract or service has had an external audit. Limits on mainnet are kept low so that a
 defect costs little: a provider with no history can be paid at most 25 USDG per job, rising with
-its record to at most 125 USDG per job.
+its record to at most 250 USDG per job.
 
 ## How to report
 
